@@ -4,7 +4,6 @@
 }
 
 body {
-    width: 80%;
     background: #1D1B26;
 }
 
@@ -13,11 +12,14 @@ header {
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: 1px solid #d50082;
+    border-image-slice: 1;
 }
 
-.logo {
+.logo a {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    text-decoration: none;
 }
 
 .navigation_bar {
@@ -26,17 +28,63 @@ header {
 
 .navigation_bar a {
     color: white;
-    font-size: 20px;
-    padding: 15px;
+    font-size: 25px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 2px;
     text-decoration: none;
+    transition:  0.5s ease-in-out;
 }
 
-.themeButton_box button {
+.navigation_bar a:hover {
+    background-color: white;
+    color: black;
+}
+
+.welcome_box {
+    width: 80%;
+}
+
+.choose_box_background_box {
+    align-items: center;
+    height: 240px;
+    background-image: url(background-3-darker.jpg);
+    background-attachment: fixed;
+    display: flex;
+    margin-bottom: 3%;
+    transition: 0.5s ease-in-out;
+}
+
+.choose_box_background_box:hover {
+    padding: 10%;
+    transition: 0.8s ease;
+    background-image: url(background-3-darker.jpg);
+}
+
+.go_back_button_box {
+    margin-top: 3%;
+}
+
+.pass_box {
+    display: none;
+}
+
+.choose_box {
+    margin-top: 3%;
+    display: block;
+}
+
+.choose_button {
+    font-size: 35px;
     text-decoration: none;
     color: white;
     position: relative;
-    padding: 7.5px 15px;
-    border: 1px solid;
+    padding: 10px 20px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-left: none;
+    border-right: none;
     border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
     border-image-slice: 1;
     font-family: 'Montserrat', sans-serif;
@@ -45,9 +93,59 @@ header {
     letter-spacing: 2px;
     transition: .8s cubic-bezier(.165, .84, .44, 1);
     background-color: transparent;
+    z-index: 1;
+}
+
+.choose_left_box p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.5;
+    
+}
+
+.choose_right_box {
+
+}
+
+.choose_right_box p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.choose_button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+
+.choose_button:hover {
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+.choose_button:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
 }
 
 h1 {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    line-height: 1.5;
+}
+
+h2 {
     margin-top: 3%;
     text-align: center;
     font-size: 35px;
@@ -127,6 +225,7 @@ h1 {
 
 .submit_button:hover {
     background: rgba(255, 255, 255, 0);
+    cursor: pointer;
 }
 
 .submit_button:hover:before {
@@ -188,4 +287,161 @@ h1 {
     letter-spacing: 2px;
     transition: .8s cubic-bezier(.165, .84, .44, 1);
     background-color: transparent;
+}
+
+.answers_box {
+    width: 1080px;
+    margin-top: 3%;
+    display: none;
+}
+
+.choose_answer_button {
+    text-decoration: none;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #4e5052;
+    background: white;
+    transition: .3s;
+}
+
+.choose_answer_button:hover {
+    background: #ff096c;
+    color: white;
+    transform: translateY(-7px);
+    cursor:pointer;
+}
+
+.ticket_number_box {
+    margin-top: 3%;
+    align-items: center;
+    display: flex;
+    width: 480px;
+}
+
+.ticket_number_box label {
+    color: white;
+    font-size: 25px;
+}
+
+.ticket_number_box input {
+    vertical-align: middle;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    width: 120px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+.answers_box_choose {
+    width: 1080px;
+    margin-top: 3%;
+    display: flex;
+}
+
+.created_answer_text {
+    margin-top: 3%;
+    display: flex;
+}
+
+.text_for_copy2 {
+    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border-image-slice: 1;
+    border-radius: 5px;
+    border-left: none;
+    border-right: none;
+    background: #1D1B26;
+    color: white;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contacts_box {
+    margin-top: 3%;
+    width: 1080px;
+    display: none;;
+}
+
+.contacts_box_main {
+    display: flex;
+}
+
+.important_contacts_op {
+    text-align: center;
+    color: white;
+}
+
+.important_contacts_op p {
+    margin-top: 1%;
+    font-size: 25px;
+}
+
+.important_contacts_op a {
+    text-decoration: none;
+    color: grey;
+}
+
+h3 {
+    margin-top: 3%;
+    font-size: 35px;
+    line-height: 1.5;
+}
+
+.important_contacts_op_table {
+    margin-top: 5%;
+}
+
+table.iksweb {
+    text-decoration: none;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+table.iksweb th {
+    font-weight: normal;
+    font-size: 20px; 
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+table.iksweb td {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+table.iksweb td,table.iksweb th {
+    white-space: pre-wrap;
+    padding: 10px 5px;
+    line-height: 1.5;
+    vertical-align: middle;
+    border: 1px solid #c9c9c9;
+}
+
+table.iksweb tr:hover {
+    background-color: #f9fafb;
+}
+
+table.iksweb td {
+    transition: 0.3s ease-in-out;
+}
+
+table.iksweb tr:hover td {
+    padding: 3%;
+    color: #000000;
+    cursor: default;
+    transition: 0.8s ease;
 }
