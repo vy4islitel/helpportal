@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Генератор плановых работ</title>
+    <link rel="stylesheet" href="plannedworks-style.css">
+    <script defer src="plannedworkd-script.js"></script>
+</head>
+
+<header>
+    <div class="logo">
+        <a href="index.html">O2 Help Portal</a>
+    </div>
+
+    <div class="navigation_bar">
+        <a href="index.html">Главная</a>
+        <a href="#">МЕНЮ</a>
+        <a href="#">МЕНЮ 2</a>
+        <a href="#">МЕНЮ 3</a>
+    </div>
+</header>
+
+<body>
+    <div class="PW_mainForm">
+        <div class="PW_formLeftColumn">
+            <div class="leftColumn_block">
+                <p>Номер заявки:</p>
+                <input id="inputTTnumber">
+            </div>
+
+            <div class="leftColumn_block">
+                <p>Дата начала работ:</p>
+                <input type="date" id="dateA">
+            </div>
+
+            <div class="leftColumn_block">
+                <p>Время начала работ:</p>
+                <input type="time" id="timeA">
+            </div>
+
+            <div class="leftColumn_block">
+                <p>Кол-во прерываний и их длительность:</p>
+                <input placeholder="Оставить пустым, если их нет" id="pauses">
+            </div>
+        </div>
+
+        <div class="PW_formRightColumn">
+            <div class="rightColumn_block">
+                <p>Выберите тип работ:</p>
+                <select id="selectTypeOfWorks">
+                    <option>Плановые</option>
+                    <option>Аварийные</option>
+                </select>
+            </div>
+
+            <div class="rightColumn_block">
+                <p>Дата окончания работ:</p>
+                <input type="date" id="dateB">
+            </div>
+
+            <div class="rightColumn_block">
+                <p>Время окончания работ:</p>
+                <input type="time" id="timeB">
+            </div>
+
+            <div class="rightColumn_block">
+                <p>Выберите услугу:</p>
+                <select id="selectService">
+                    <option>Выбрать...</option>
+                    <option>ВОЛС</option>
+                    <option>Канал Связи</option>
+                    <option>Интернет</option>
+                </select>
+
+                <div id="VOLS" class="VOLS_box">
+                    <p>Точка А:</p>
+                    <input id="inputVOLSa">
+
+                    <p>Точка Б:</p>
+                    <input id="inputVOLSb">
+                </div>
+
+                <div id="LINK" class="LINK_BOX">
+                    <p>Точка А:</p>
+                    <input id="inputLINKa">
+
+                    <p>Точка Б:</p>
+                    <input id="inputLINKb">
+                </div>
+
+                <div id="INTERNET" class="INTERNET_box">
+                    <p>Наименование договора:</p>
+                    <input id="inputINTERNET">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submitButton_box">
+        <button type="submit" id="submitButton">Подтвердить</button>
+    </div>
+
+    <div class="getText_box" id="getFullText">
+    </div>
+
+</body>
+
+</html>

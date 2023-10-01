@@ -1,0 +1,97 @@
+* {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #1D1B26;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d50082;
+    border-image-slice: 1;
+}
+
+.logo a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.navigation_bar {
+    display: flex;
+}
+
+.navigation_bar a {
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition:  0.5s ease-in-out;
+}
+
+.navigation_bar a:hover {
+    background-color: white;
+    color: black;
+}
+
+.PW_mainForm {
+    margin-top: 5%;
+    padding: 10px 5px;
+    display: flex;
+    width: 800px;
+    background: rgb(255,255,255);
+    border-radius: 3px;
+}
+
+.PW_mainForm label {
+}
+
+.PW_formLeftColumn {
+    display: block;
+}
+
+.PW_formRightColumn {
+    display: block;
+}
+
+.leftColumn_block {
+    display: block;
+    padding: 10px 5px;
+}
+
+.rightColumn_block {
+    display: block;
+    padding: 10px 5px;
+}
+
+.submitButton_box {
+    margin-top: 3%;
+    padding: 10px 5px;
+    display: flex;
+    width: 800px;
+}
+
+.VOLS_box {
+    display: none;
+}
+
+.LINK_box {
+    display: none;
+}
+
+.INTERNET_box {
+    display: none;
+}
+
+.getText_box {
+    display: none;
+}
+
