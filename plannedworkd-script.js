@@ -73,7 +73,7 @@ submitFormButton.onclick = function Saa() {
 
     document.getElementById('getFullText').style = 'display: flex;'
     letsGetFullText.innerHTML = `
-    <textarea>Здравствуйте! Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о следующих работах:
+    <textarea class="readyText_area" cols="90" rows="2">Здравствуйте! Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о следующих работах:
     
     Тип работ:
     ${typeOfWorks.value}

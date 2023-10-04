@@ -28,10 +28,13 @@ const moreInfoTTButton = document.getElementById('moreInfoTTBtn')
 const solutionTTButton = document.getElementById('solutionTTBtn')
 const canIcloseTTButton = document.getElementById('canIcloseTTBtn')
 const closedTTButton = document.getElementById('closedTTBtn')
+const actualityTTButton = document.getElementById('actualityTTBtn')
 
 // Константы для темы
 const themeButton = document.getElementById('themeButton')
 const jsBody = document.getElementById('jsBody')
+
+let inputSolutionTTtext = document.getElementById('inputSolutionTextArea')
 
 passSelectButton.onclick = function () {
     document.getElementById('passBox').style = "display: block;"
@@ -75,6 +78,8 @@ answersSelectButton.onclick = function () {
         console.log(createdTTtext)
         let createdTTAnswerText = document.getElementById('createdAnswerTextBox')
 
+        document.getElementById('inputSolutionTextBox').style = 'display: none;'
+
         createdTTAnswerText.innerHTML =
             `
         <textarea class="text_for_copy2" cols="90" rows="2" id="textForCopyCreatedTT">${createdTTtext}</textarea>
@@ -87,11 +92,17 @@ answersSelectButton.onclick = function () {
 
     moreInfoTTButton.onclick = function () {
         let ticketNumber = document.getElementById('inputTicketNumber')
-        let moreInfoTTtext = 'Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по заявке № ' + ticketNumber.value + ' необходима дополнительная информация:'
-        console.log(moreInfoTTtext)
+        
         let moreInfoTTAnswerText = document.getElementById('createdAnswerTextBox')
 
-        moreInfoTTAnswerText.innerHTML =
+        let submitSolutionTextButton = document.getElementById('submitSolutionText')
+
+        document.getElementById('inputSolutionTextBox').style = 'display: block;'
+
+        submitSolutionTextButton.onclick = function() {
+            let moreInfoTTtext = 'Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по заявке № ' + ticketNumber.value + ' необходима дополнительная информация: ' + inputSolutionTTtext.value
+        console.log(moreInfoTTtext)
+            moreInfoTTAnswerText.innerHTML =
             `
         <textarea class="text_for_copy2" cols="90" rows="2" id="textForCopyCreatedTT">${moreInfoTTtext}</textarea>
         `
@@ -99,15 +110,21 @@ answersSelectButton.onclick = function () {
         let moreInfoTTAnswerTextCopy = document.getElementById('textForCopyCreatedTT')
         moreInfoTTAnswerTextCopy.select()
         document.execCommand('copy')
+        }
     }
 
     solutionTTButton.onclick = function () {
         let ticketNumber = document.getElementById('inputTicketNumber')
-        let solutionTTtext = 'Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по заявке № ' + ticketNumber.value + ' появилось решение:'
+        let solutionTTtext = 'Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по заявке № ' + ticketNumber.value + ' появилось решение: ' + inputSolutionTTtext.value
         console.log(solutionTTtext)
         let solutionTTAnswerText = document.getElementById('createdAnswerTextBox')
 
-        solutionTTAnswerText.innerHTML =
+        let submitSolutionTextButton = document.getElementById('submitSolutionText')
+
+        document.getElementById('inputSolutionTextBox').style = 'display: block;'
+
+        submitSolutionTextButton.onclick = function() {
+            solutionTTAnswerText.innerHTML =
             `
         <textarea class="text_for_copy2" cols="90" rows="2" id="textForCopyCreatedTT">${solutionTTtext}</textarea>
         `
@@ -115,6 +132,8 @@ answersSelectButton.onclick = function () {
         let solutionTTAnswerTextCopy = document.getElementById('textForCopyCreatedTT')
         solutionTTAnswerTextCopy.select()
         document.execCommand('copy')
+        }
+
     }
 
     canIcloseTTButton.onclick = function () {
@@ -122,6 +141,8 @@ answersSelectButton.onclick = function () {
         let canIcloseTTtext = 'Здравствуйте! Уточните, пожалуйста: можем ли мы закрыть заявку № ' + ticketNumber.value + ' в случае, если по ней у Вас не осталось больше вопросов?'
         console.log(canIcloseTTtext)
         let canIcloseTTAnswerText = document.getElementById('createdAnswerTextBox')
+
+        document.getElementById('inputSolutionTextBox').style = 'display: none;'
 
         canIcloseTTAnswerText.innerHTML =
             `
@@ -139,6 +160,8 @@ answersSelectButton.onclick = function () {
         console.log(closedTTtext)
         let closedTTAnswerText = document.getElementById('createdAnswerTextBox')
 
+        document.getElementById('inputSolutionTextBox').style = 'display: none;'
+
         closedTTAnswerText.innerHTML =
             `
         <textarea class="text_for_copy2" cols="90" rows="3" id="textForCopyCreatedTT">${closedTTtext}</textarea>
@@ -146,6 +169,23 @@ answersSelectButton.onclick = function () {
 
         let closedTTAnswerTextCopy = document.getElementById('textForCopyCreatedTT')
         closedTTAnswerTextCopy.select()
+        document.execCommand('copy')
+    }
+
+    actualityTTButton.onclick = function() {
+        let ticketNumber = document.getElementById('inputTicketNumber')
+        let actualityTTtext = 'Здравствуйте! Уточните, пожалуйста, актуальность заявки № ' + ticketNumber.value + '. Можем ли мы закрыть заявку в случае, если по ней у Вас не осталось более вопросов?'
+        console.log(actualityTTtext)
+        let actualityTTAnswerText = document.getElementById('createdAnswerTextBox')
+
+        document.getElementById('inputSolutionTextBox').style = 'display: none;'
+
+        actualityTTAnswerText.innerHTML = `
+        <textarea class="text_for_copy2" cols="90" rows="3" id="textForCopyCreatedTT">${actualityTTtext}</textarea>
+        `
+
+        let actualityTTtextCopy = document.getElementById('textForCopyCreatedTT')
+        actualityTTtextCopy.select()
         document.execCommand('copy')
     }
 
@@ -174,7 +214,9 @@ submitButton.onclick = function () {
 }
 
 copyAnswerButton.onclick = function () {
-
+    copyText = document.getElementById('textForCopy')
+    copyText.select()
+    document.execCommand('copy')
 }
 
 contactsSelectButton.onclick = function () {

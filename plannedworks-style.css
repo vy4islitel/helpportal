@@ -95,3 +95,17 @@ header {
     display: none;
 }
 
+.welcome_box {
+    margin-top: 5%;
+    display: flex;
+}
+
+.welcome_box h {
+    font-size: 35px;
+    color: white;
+}
+
+.readyText_area {
+    
+}
+
