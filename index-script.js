@@ -104,7 +104,7 @@ answersSelectButton.onclick = function () {
         console.log(moreInfoTTtext)
             moreInfoTTAnswerText.innerHTML =
             `
-        <textarea class="text_for_copy2" cols="90" rows="2" id="textForCopyCreatedTT">${moreInfoTTtext}</textarea>
+        <textarea class="text_for_copy2" cols="90" rows="4" id="textForCopyCreatedTT">${moreInfoTTtext}</textarea>
         `
 
         let moreInfoTTAnswerTextCopy = document.getElementById('textForCopyCreatedTT')
@@ -126,7 +126,7 @@ answersSelectButton.onclick = function () {
         submitSolutionTextButton.onclick = function() {
             solutionTTAnswerText.innerHTML =
             `
-        <textarea class="text_for_copy2" cols="90" rows="2" id="textForCopyCreatedTT">${solutionTTtext}</textarea>
+        <textarea class="text_for_copy2" cols="90" rows="4" id="textForCopyCreatedTT">${solutionTTtext}</textarea>
         `
 
         let solutionTTAnswerTextCopy = document.getElementById('textForCopyCreatedTT')

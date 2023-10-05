@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #1D1B26;
+    background: rgb(25,25,25);
 }
 
 header {
@@ -12,7 +12,7 @@ header {
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #d50082;
+    border-bottom: 1px solid #ff9d09;
     border-image-slice: 1;
 }
 

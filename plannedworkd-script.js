@@ -76,7 +76,7 @@ submitFormButton.onclick = function Saa() {
     <textarea class="readyText_area" cols="90" rows="2">Здравствуйте! Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о следующих работах:
     
     Тип работ:
-    ${typeOfWorks.value}
+    ${typeOfWorks}
 
     Дата и время проведения работ:
     ${worksInterval}
