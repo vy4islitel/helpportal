@@ -1,6 +1,7 @@
 * {
     margin: 0 auto;
     font-family: Arial;
+    justify-content: center;
 }
 
 body {
@@ -70,7 +71,7 @@ header {
 
 .choose_box_background_box {
     align-items: center;
-    width: 740px;
+    width: 700px;
     height: 240px;
     background-image: url(background-3-darker.jpg);
     background-attachment: fixed;
@@ -78,6 +79,7 @@ header {
     margin-bottom: 3%;
     transition: 0.5s ease-in-out;
     position: relative;
+    margin: 3%;
 }
 
 .choose_box_background_box:hover {
