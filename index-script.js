@@ -74,7 +74,7 @@ answersSelectButton.onclick = function () {
 
     createdTTButton.onclick = function () {
         let ticketNumber = document.getElementById('inputTicketNumber')
-        let createdTTtext = 'Здравствуйте! Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по Вашему запросу была открыта заявка № ' + ticketNumber.value
+        let createdTTtext = 'Здравствуйте! Дата-центр O2XYGEN информирует Вас о регистрации заявки № ' + ticketNumber.value
         console.log(createdTTtext)
         let createdTTAnswerText = document.getElementById('createdAnswerTextBox')
 
@@ -100,7 +100,7 @@ answersSelectButton.onclick = function () {
         document.getElementById('inputSolutionTextBox').style = 'display: block;'
 
         submitSolutionTextButton.onclick = function() {
-            let moreInfoTTtext = 'Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по заявке № ' + ticketNumber.value + ' необходима дополнительная информация: ' + inputSolutionTTtext.value
+            let moreInfoTTtext = 'Здравствуйте! Дата-центр O2XYGEN информирует Вас о том, что по заявке № ' + ticketNumber.value + ' необходима дополнительная информация: ' + inputSolutionTTtext.value
         console.log(moreInfoTTtext)
             moreInfoTTAnswerText.innerHTML =
             `
@@ -115,7 +115,7 @@ answersSelectButton.onclick = function () {
 
     solutionTTButton.onclick = function () {
         let ticketNumber = document.getElementById('inputTicketNumber')
-        let solutionTTtext = 'Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что по заявке № ' + ticketNumber.value + ' появилось решение: ' + inputSolutionTTtext.value
+        let solutionTTtext = 'Здравствуйте! Дата-центр O2XYGEN информирует Вас о том, что по заявке №' + ticketNumber.value + ' появилось решение: ' + inputSolutionTTtext.value + '. Пожалуйста, уточните: можем ли мы закрыть заявку в случае, если по ней у Вас не осталось больше вопросов?'
         console.log(solutionTTtext)
         let solutionTTAnswerText = document.getElementById('createdAnswerTextBox')
 
@@ -156,7 +156,7 @@ answersSelectButton.onclick = function () {
 
     closedTTButton.onclick = function () {
         let ticketNumber = document.getElementById('inputTicketNumber')
-        let closedTTtext = 'Здравствуйте! Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о том, что заявка № ' + ticketNumber.value + ' закрыта. Просим Вас не отвечать на данное письмо кроме случая, если по данной заявке у Вас остались невыясненные вопросы. Рады помочь Вам!'
+        let closedTTtext = 'Здравствуйте! Дата-центр O2XYGEN информирует Вас о том, что заявка № ' + ticketNumber.value + ' закрыта. Просим Вас не отвечать на данное письмо кроме случая, если по данной заявке у Вас остались невыясненные вопросы. Рады помочь Вам!'
         console.log(closedTTtext)
         let closedTTAnswerText = document.getElementById('createdAnswerTextBox')
 
