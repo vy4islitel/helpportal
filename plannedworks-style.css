@@ -4,7 +4,13 @@
 }
 
 body {
-    background: rgb(25,25,25);
+}
+
+.bg_video {
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+    background-repeat: repeat;
 }
 
 header {
@@ -12,14 +18,38 @@ header {
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ff9d09;
     border-image-slice: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(30px);
+    background-color: transparent;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
+    align-items: center;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     text-decoration: none;
+    margin-left: 25px;
+    font-weight: 100;
+}
+
+.textHub_bl {
+    color: black;
+    background-color: orange;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
 }
 
 .navigation_bar {
@@ -44,14 +74,27 @@ header {
 
 .PW_mainForm {
     margin-top: 5%;
-    padding: 10px 5px;
+    padding: 10px 5px 15px 5px;
     display: flex;
     width: 800px;
-    background: rgb(255,255,255);
+    border-bottom: 1px solid #ff9d09;
+    border-top: 1px solid #ff9d09;
     border-radius: 3px;
 }
 
-.PW_mainForm label {
+.PW_mainForm p {
+    color: white;
+    padding-bottom: 5px;
+}
+
+.PW_mainForm input {
+    width: 230px;
+    height: 30px;
+}
+
+.PW_mainForm select {
+    width: 230px;
+    height: 30px;
 }
 
 .PW_formLeftColumn {
@@ -64,12 +107,12 @@ header {
 
 .leftColumn_block {
     display: block;
-    padding: 10px 5px;
+    padding-top: 10px;
 }
 
 .rightColumn_block {
     display: block;
-    padding: 10px 5px;
+    padding-top: 10px;
 }
 
 .submitButton_box {
@@ -93,6 +136,14 @@ header {
 
 .getText_box {
     display: none;
+    margin-top: 3%;
+}
+
+.getText_box textarea {
+    background: transparent;
+    color: white;
+    resize: none;
+    border: none;
 }
 
 .welcome_box {

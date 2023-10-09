@@ -49,8 +49,12 @@ selectService.onchange = function () {
 }
 
 const submitFormButton = document.getElementById('submitButton')
+const letsGetFullText = document.getElementById('getFullText')
+
+let CopyText
 
 submitFormButton.onclick = function Saa() {
+
     let inputTTNumber = document.getElementById('inputTTnumber')
     let ticketNumber = inputTTNumber.value
     console.log(ticketNumber)
@@ -67,13 +71,12 @@ submitFormButton.onclick = function Saa() {
     let selectTypeOfWorks = document.getElementById('selectTypeOfWorks')
     let typeOfWorks = selectTypeOfWorks.value
 
+    let pauses = document.getElementById('inputPauses')
+
     console.log(typeOfWorks)
 
-    let letsGetFullText = document.getElementById('getFullText')
-
-    document.getElementById('getFullText').style = 'display: flex;'
     letsGetFullText.innerHTML = `
-    <textarea class="readyText_area" cols="90" rows="2">Здравствуйте! Дата-центр O2XYGEN свидетельствует Вам своё уважение и информирует о следующих работах:
+    <textarea id="textForCopy" class="readyText_area" cols="110" rows="15">Здравствуйте! Дата-центр O2XYGEN информирует Вас о следующих работах:
     
     Тип работ:
     ${typeOfWorks}
@@ -83,6 +86,19 @@ submitFormButton.onclick = function Saa() {
 
     Предоставляемая услуга:
     ${selectService.value}, Точка А: ${inputLINKa.value}${inputVOLSa.value}, Точка Б: ${inputLINKb.value}${inputVOLSb.value}
+
+    Количество прерываний и их длительность:
+    ${pauses.value}
+
+    Номер внутренней заявки по проведению плановых работ: ${ticketNumber}. Пожалуйста, не удаляйте номер заявки из темы письма.
+
+    В случае возникновения вопросов, напишите нам ответным письмом, либо позвоните по указанному ниже номеру телефона:
+    +7 495 933 55 99
     </textarea>
     `
+        if (inputTTNumber.value === '', pauses.value === '')
+        document.getElementById('getFullText').style = 'display: none;', alert('Заполните пустые поля!')
+    else
+    document.getElementById('getFullText').style = 'display: flex;', CopyText = document.getElementById('textForCopy'), CopyText.select(), document.execCommand('copy')
+return
 }
