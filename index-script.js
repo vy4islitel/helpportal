@@ -238,29 +238,9 @@ contactsSelectButton.onclick = function () {
 
 }
 
-aboutGroupsShBtn.onclick = function() {
-    document.getElementById('routeTTboxButtonsBar').style = 'display: none;'
-    document.getElementById('routeTTboxWelcome').style = 'display: none;'
-    document.getElementById('routeTTboxAboutGroups').style = 'display: block;'
-    document.getElementById('routeTTgoBackBtntoList').style = 'display: flex;'
-    document.getElementById('routeTTgoBackBtntoList').innerHTML = `<button id="rtTTgbBtnToList" class="choose_button">НАЗАД</button`
-    let rtTTgbBtnToList = document.getElementById('rtTTgbBtnToList')
-
-    rtTTgbBtnToList.onclick = function() {
-        document.getElementById('routeTTboxButtonsBar').style = 'display: flex;'
-        document.getElementById('routeTTboxWelcome').style = 'display: block;'
-        document.getElementById('routeTTboxAboutGroups').style = 'display: none;'
-        document.getElementById('routeTTgoBackBtntoList').style = 'display: none;'
-    }
-
-}
-
-routeTTtableShBtn.onclick = function() {
-    document.getElementById('routeTTtable').style = 'display: block;'
-}
-
-routeTTexamplesBtn.onclick = function() {
-    alert('Упс! Страница ещё в разработке!')
+routeTTSelectBtn.onclick = function() {
+    document.getElementById('welcomeBox').style = "display: none;"
+    document.getElementById('routeTTbox').style = "display: block;"
 }
 
 let now = new Date()

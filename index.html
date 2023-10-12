@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оформление пропуска</title>
+    <title>HelpHub</title>
     <link rel="stylesheet" href="index-style.css">
     <script defer src="index-script.js"></script>
 </head>
@@ -20,15 +20,14 @@
         </div>
 
         <div class="navigation_bar">
-            <a href="index.html">БАЗА</a>
+            <a href="index.html">ИНСТРУМЕНТЫ</a>
             <a href="plannedworks.html">ПЛАНОВЫЕ РАБОТЫ</a>
         </div>
 
     </header>
 
     <div class="welcome_box" id="welcomeBox">
-        <h1>А это база! Здесь самые основные полезные баги(фичи) - пропуска, отбивки, контакты и маршрутизация. Всё под
-            рукой.</h1>
+        <h1>Основные инструменты для быстрой работы</h1>
 
         <div class="choose_box" id="chooseBox">
 
@@ -67,11 +66,11 @@
 
                 <div class="choose_box_background_box">
                     <div class="choose_left_box">
-                        <button class="choose_button" id="routeTTSelectBtn">FAQ</button>
+                        <button class="choose_button" id="routeTTSelectBtn">ТАБЛИЦА</button>
                     </div>
 
                     <div class="choose_right_box">
-                        <p>Сохрани нервы Старшему. Сначала посмотри здесь</p>
+                        <p>Если ты запутался и не понимаешь, куда кидать задачу - тебе сюда</p>
                     </div>
                 </div>
             </div>
@@ -244,126 +243,6 @@
         <div class="routeTT_box_welcome" id="routeTTboxWelcome">
             <h>Добро пожаловать в отдел маршрутизации задач!</h>
             <p>Здесь ты сможешь найти подсказки на случай, если ты потерялся и не знаешь, что делать с заявкой.</p>
-        </div>
-
-        <div class="routeTT_box_buttons_bar" id="routeTTboxButtonsBar">
-            <button type="text" id="aboutGroupsShBtn" class="choose_answer_button">О ОТДЕЛАХ</button>
-            <button type="text" id="routeTTtableShBtn" class="choose_answer_button">ТАБЛИЦА</button>
-            <button type="text" id="routeTTexamplesBtn" class="choose_answer_button">ПРИМЕРЫ</button>
-        </div>
-
-        <div class="routeTT_box_about_groups_backButton_boxNoDisp" id="routeTTgoBackBtntoList"></div>
-
-        <div class="routeTT_box_about_groups" id="routeTTboxAboutGroups">
-            <div class="routeTT_box_about_groups_block">
-                <div class="routeTT_box_about_groups_leftside">
-                    <img src= "supportNETicon.png" width="256px" height="256px">
-                </div>
-                <div class="routeTT_box_about_groups_rightside">
-                    <p class="rTThdr">Отдел Сети Передачи Данных</h>
-                    <p class="rTTpsh">(Support_Net, 2-я линия)</p>
-
-                    <p class="rTTpsh2">Отдел СПД занимается вопросами, связанными с работой сетевой инфраструктуры
-                        Дата-Центра.</p>
-                    <p class="rTTpostul">К часто решаемым вопросам можно отнести:</p>
-                    <dl>
-                        <dt>Проработка каналов связи</dt>
-                        <dt>Проблемы на каналах связи, потери траффика либо пакетов</dt>
-                        <dt>Отсутствие линков или ресурсов (сайта, оборудования и т.д.)</dt>
-                        <dt>Настройка маршрутизации</dt>
-                    </dl>
-                </div>
-            </div>
-
-            <div class="routeTT_box_about_groups_block">
-                <div class="routeTT_box_about_groups_leftside">
-                    <img src="supportCLOUDicon.png" width="256px" height="256px">
-                </div>
-                <div class="routeTT_box_about_groups_rightside">
-                    <p class="rTThdr">Группа "Облако - Клиенты"</h>
-                    <p class="rTTpsh">(Support_Cloud)</p>
-
-                    <p class="rTTpsh2">Группа "Облако-Клиенты" занимаются поддержкой и обработкой клиентских запросов,
-                        связанных с облачной инфраструктурой и решением базовых задач по поддержке данной инфраструктуры
-                    </p>
-                    <p class="rTTpostul">К часто решаемым вопросам можно отнести:</p>
-                    <dl>
-                        <dt>Добавление или удаление ресурсов с виртуальной машины (VDC)</dt>
-                        <dt>Добавление IP-адресов в "Белый Лист" (White List)</dt>
-                        <dt>Работы с виртуальной машиной (VDC) или vEDGE</dt>
-                        <dt>Миграция ресурсов с одной виртуальной машины на другую</dt>
-                    </dl>
-                </div>
-            </div>
-
-            <div class="routeTT_box_about_groups_block">
-                <div class="routeTT_box_about_groups_leftside">
-                    <img src="coreCLOUDicon.png" width="256px" height="256px">
-                </div>
-                <div class="routeTT_box_about_groups_rightside">
-                    <p class="rTThdr">Группа "Облако - Ядро"</h>
-                    <p class="rTTpsh">(Core_Cloud)</p>
-
-                    <p class="rTTpsh2">Группа "Облако - Ядро" обеспечивает техническую поддержку и обеспечение
-                        работоспособности самой инфраструктуры (ядра) облака. Занимаются сложными техниическими
-                        задачами, связанные с облаком.</p>
-                    <p class="rTTpostul">К часто решаемым вопросам можно отнести:</p>
-                    <dl>
-                        <dt>Работы с S3-хранилищем</dt>
-                        <dt>Работы с "Шарами" (Share) - виртуальные дисковые пространства, предназначенные для общего
-                            пользования</dt>
-                        <dt>Работы с протоколом NSF (Network File System) - протоколом, позволяющем использовать
-                            удалённо каталоги данных</dt>
-                        <dt>Работы с "Бэкапами" (Backup) - резервным копированием, а также ресурсами, выделяемыми под
-                            эти самые бэкапы</dt>
-                    </dl>
-                </div>
-            </div>
-
-            <div class="routeTT_box_about_groups_block">
-                <div class="routeTT_box_about_groups_leftside">
-                    <img src="cyberSECURITYicon.png" width="256px" height="256px">
-                </div>
-                <div class="routeTT_box_about_groups_rightside">
-                    <p class="rTThdr">Группа "Информационная Безопасность"</h>
-                    <p class="rTTpsh">(Cyber_Security)</p>
-
-                    <p class="rTTpsh2">Группа "Информационная Безопасность" занимается обеспечением информационной
-                        безопасности сетевой инфраструктуры. Обеспечение информационной безопасности осуществляется с
-                        помощью программно-аппаратных средств.</p>
-                    <p class="rTTpostul">К часто решаемым вопросам можно отнести:</p>
-                    <dl>
-                        <dt>Аппаратное обеспечение ИБ, т.е. с помощью специлизированного оборудования, такого как:
-                            UserGate, FortiNet и т.п.</dt>
-                        <dt>Программное обеспечение ИБ, т.е. с помощью специлизированного программного обеспечения,
-                            такого как: Stormwall, FireWall, ViPNet и т.п.</dt>
-                        <dt>Защита от DDoS-аттак</dt>
-                        <dt>Работы с ФЗ-Облаком</dt>
-                    </dl>
-                </div>
-            </div>
-
-            <div class="routeTT_box_about_groups_block">
-                <div class="routeTT_box_about_groups_leftside">
-                    <img src="supportHARDWAREicon.png" width="256px" height="256px">
-                </div>
-                <div class="routeTT_box_about_groups_rightside">
-                    <p class="rTThdr">Группа "Инженеры по физической инфраструктуре"</h>
-                    <p class="rTTpsh">(Support_Hardware)</p>
-
-                    <p class="rTTpsh2">Группа Инженеров по физической инфраструктуре осуществляет работы, связанные с
-                        аппаратным комплексом.</p>
-                    <p class="rTTpostul">К часто решаемым вопросам можно отнести:</p>
-                    <dl>
-                        <dt>Замена комплектующих на оборудовании (HDD, SSD, RAM, CPU и т.п.)</dt>
-                        <dt>Работа с оборудованием клиента "ДомКлик"</dt>
-                        <dt>Настройка и обслуживание оборудования с использованием IPMI/IDRAC</dt>
-                        <dt>Работы с iLO (механизм управления серверами в условиях отсутствия физического доступа к ним)
-                        </dt>
-                    </dl>
-                </div>
-            </div>
-
         </div>
 
         <div class="routeTT_table" id="routeTTtable">
