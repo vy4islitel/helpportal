@@ -68,10 +68,6 @@ header {
     color: black;
 }
 
-.welcome_box {
-    width: 80%;
-}
-
 .bg_video {
     position: absolute;
     width: 100%;
@@ -561,9 +557,6 @@ table.iksweb tr:hover td {
     transition: 0.5s ease;
 }
 
-.routeTT_box_about_groups_leftside {
-}
-
 .routeTT_box_about_groups_rightside {
     width: 940px;
     line-height: 1.5;
@@ -653,12 +646,6 @@ table.iksweb2 tr:hover td {
     display: none;
 }
 
-.solutionText_input_box p {;
-    color: white;
-    font-size: 25px;
-    text-align: center;
-}
-
 .solutionText_input_box input {
     width: 480px;
     height: 120px;
@@ -670,4 +657,18 @@ table.iksweb2 tr:hover td {
     margin-top: 3%;
     display: flex;
     align-items: center;
+}
+
+
+
+@media (max-width: 1450px) {
+    .choose_box {
+        display: grid;
+    }
+}
+
+@media (max-width: 1800px) {
+    .bg_video {
+        width: 250%;
+    }
 }
